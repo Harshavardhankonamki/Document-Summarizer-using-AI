@@ -1,0 +1,137 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document Summarizer</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+			integrity="sha512-REHJhYRaJ++P5vdc2W3JbSbFrnR5r8KMkj5n9tpdkZB0PQJYv8zAgMrYOK6C6pU/Epf4kZt+tZmX2o6fSqRc7g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer" />
+		<style>
+			body {
+				font-family: Arial, sans-serif;
+				margin: 0;
+				padding: 0;
+				background-color: #f9f9f9;
+				color: #333;
+			}
+			header {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				background-color: #007bff;
+				padding: 20px 20px;
+			}
+
+			.logo h1 {
+				margin: 0;
+				color: #fff;
+			}
+
+			.nav-links {
+				display: flex;
+				gap: 20px;
+			}
+
+			.nav-links a {
+                font-size: 20px;
+				color: #fff;
+				text-decoration: none;
+			}
+
+			.container {
+				width: 80%;
+				margin: 50px auto;
+				padding: 30px;
+				background-color: #fff;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			}
+			footer {
+				margin-top: 50px;
+				padding: 30px 0;
+				background-color: #f9f9f9;
+				text-align: center;
+			}
+			h1 {
+				margin-bottom: 20px;
+			}
+			h2 {
+				margin-bottom: 15px;
+				font-size: 24px;
+				color: #007bff;
+			}
+			p {
+				font-size: 18px;
+				line-height: 1.6;
+				margin-bottom: 20px;
+			}
+			input[type="file"] {
+				margin-bottom: 20px;
+				font-size: 18px;
+				padding: 10px;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+			}
+			input[type="submit"] {
+				background-color: #007bff;
+				color: #fff;
+				border: none;
+				padding: 15px 30px;
+				border-radius: 5px;
+				cursor: pointer;
+				font-size: 18px;
+			}
+			.fas {
+				margin-right: 5px;
+			}
+
+			header a:hover {
+				text-decoration: underline;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="logo">
+				<h1><i class="fas fa-file-alt"></i> Document Summarizer</h1>
+			</div>
+
+			<div class="nav-links">
+				<a href="#">Home</a>
+				<a href="#">About</a>
+				<a href="#">Services</a>
+				<a href="#">Contact</a>
+			</div>
+		</header>
+		<div class="container">
+			<h2>Upload a Document for Summarization</h2>
+			<form action="/summarize" method="post" enctype="multipart/form-data">
+				<input type="file" name="file" /><br />
+				<input type="submit" value="Summarize" />
+			</form>
+		</div>
+		<footer>
+			<div class="container">
+				<h2>About Document Summarizer</h2>
+				<p>
+					Document summarization is a process that condenses the content of a
+					document while retaining its essential information. It aims to provide
+					a concise representation of the main points within the text, making it
+					easier for users to comprehend large volumes of information quickly.
+					In the provided code, the document summarization method involves
+					tokenizing the text into words and sentences, calculating the
+					frequency of each word, scoring sentences based on word frequency,
+					determining an average score, and generating a summary by selecting
+					sentences with scores above a certain threshold. Finally, the
+					summarized content is displayed on the webpage for user convenience.
+				</p>
+			</div>
+		</footer>
+	</body>
+</html>
